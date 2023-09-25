@@ -142,3 +142,71 @@ use lower case
 This seems a cleaner way to write code, with an easier way to get the exact results wanted. 
 TS will tell me if things don't match. 
 [ ] is for arrays and { } is for objects.
+
+//=====================================================================================
+
+# Video 6 Type Inference
+TypeScript tries to infer what you are doing. It will see words and assign it as a string variable. It won't let you then assign a number to the variable later on.
+Embrace this feature!
+
+# Video 7 Working With Union Types
+
+Union types allow for more than one type to be assigned to an object. (Name and id number, for example.)
+let course: string | number =                           (or)
+let userName: string | string[];
+
+
+#  Video 8 Assigning Type Aliases
+Aliases can be used to clean up code where 2 objects have the same info attached - as in this example
+
+let  people: {
+  name: string;
+  age:  number
+}[];                                                   //array form
+
+let person: {
+  name: string;
+  age: number;
+  }     
+
+(This is the Alias, used for both)
+type Person = {
+  name: string;                          
+ age:  number
+}
+
+# Video 9 Diving Into Functions & Function Types
+When working with functions, there are different places where types can be assigned.
+Variables, Parameters, Returns - function print() does not have a return, it is void.
+
+# Video 10 Understanding Generics
+A function in which we don't care what the array or value  is.  We want to create a new array using the spread operator(value, ...array) to copy an old array, and then inserting a value in front.
+The old array never changes, but we get a new array. 
+No good TS support because of the any. 
+Instead of any, <T> tells TS that the return should be the same type as the array and value.
+
+  function insertAtBeginning<T>(array: T[], value: T) {
+const newArray = [value, ...array];
+return newArray;
+ }
+ I do not know how I would ever use this.
+
+# Video 11 Classes & TypeScript
+TS allows us to add a method into a class object by adding a function without using the word function.
+
+Can define all the properties of a class at the start. Can also define private properties by adding private in front of the property.
+class Student {
+  constructor(public firstName: string, public lastName: string, public age: number, private courses: string[]) 
+}
+# Video 12 Working With Interfaces
+Only exists in TypeScript!
+Object type definitions using interface instead of type. 
+The object fulfills the parameters set by the interface.
+
+Interface can be helpful when working with other developers to ensure the proper features are added.
+
+# Video 13 Configuring the TypeScript Compiler 
+
+Ask about the files on the Explorer. 
+
+/Angular has what I need, so no need to do this step.
