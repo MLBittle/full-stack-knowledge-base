@@ -210,3 +210,16 @@ Interface can be helpful when working with other developers to ensure the proper
 Ask about the files on the Explorer. 
 
 /Angular has what I need, so no need to do this step.
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+Update after class 9.25.23
+
+Was wrong about this! Learned in class today how to set up non-Angular files with TypeScript.
+
+from terminal, enter npm init -y
+npm install typescript
+
+then check code regularly
+
+npx tsc main.ts
+node main.js
